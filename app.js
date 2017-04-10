@@ -38,7 +38,7 @@ app.use(session({
 app.use('/', index)
 app.use('/api/users', users)
 app.use('/api.swagger', swagger)
-app.use('/api/spider', spider)
+app.use('/api', spider)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

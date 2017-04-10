@@ -22,17 +22,19 @@ router.get('/', (req, res) => {
  *         description: 返回类目图片
  */
 router.get('/spider', (req, res, next) => {
-  superagent.get(req.query.link)
+  superagent
+    .get(req.query.link)
     .end((err, result) => {
       if (err) return next(err)
       let $ = cheerio.load(result.text)
-      let items, img, property = []
+      let items, img , property = []
 
       // 处理内容
       $('.list').find('li').each((idx, element) => {
         let url = $(this).find('img').attr('src')
+        // console.log(url)
         let uniqueUrl = url.substring(url.lastIndexOf('/') + 1)
-        http.get(url, function (res) {
+        http.get(url, (res) => {
           let imgData = ''
 
           res.setEncoding('binary')
@@ -43,12 +45,9 @@ router.get('/spider', (req, res, next) => {
           let Rand = Math.random()
           let save_url = config.savePath + uniqueUrl
           img.push(save_url)
-          res.on('end', function () {
-            fs.writeFile(save_url, imgData, 'binary', function (err) {
-              // console.log(save_url);
-              if (err) {
-                console.log(err)
-              }
+          res.on('end', () => {
+            fs.writeFile(save_url, imgData, 'binary', (err) => {
+              if (err) return next(err)
             })
           })
         })
@@ -68,7 +67,6 @@ router.get('/spider', (req, res, next) => {
       })
 
       title = $('.prod-info-title').find('h1').text()
-
       let allItems = {
         title: title.substring(0, title.indexOf('#')),
         img: items,
@@ -79,4 +77,3 @@ router.get('/spider', (req, res, next) => {
 })
 
 module.exports = router
-
