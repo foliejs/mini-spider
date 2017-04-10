@@ -6,14 +6,12 @@ router.get('/doc', (req, res) => {
   let options = {
     swaggerDefinition: {
       info: {
-        title: 'cute boy', // Title (required)
-        version: '1.0.0', // Version (required)
+        title: 'cute boy',
+        version: '1.0.0',
       },
     },
-    apis: ['./users.js'], // Path to the API docs
+    apis: ['./users.js']
   }
-
-  // Initialize swagger-jsdoc -> returns validated swagger spec in json format
   let swaggerSpec = swaggerJSDoc(options)
   res.send(swaggerSpec)
 })
