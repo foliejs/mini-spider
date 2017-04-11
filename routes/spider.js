@@ -3,6 +3,8 @@ const router = express.Router()
 const http = require('http')
 const superagent = require('superagent')
 const cheerio = require('cheerio')
+const config = require('../config/default.json')
+const fs = require('fs')
 
 // find user
 router.get('/', (req, res) => {
@@ -27,12 +29,13 @@ router.get('/spider', (req, res, next) => {
     .end((err, result) => {
       if (err) return next(err)
       let $ = cheerio.load(result.text)
-      let items, img , property = []
+      let img = []
+      let property = []
+      let items = []
 
       // 处理内容
       $('.list').find('li').each((idx, element) => {
-        let url = $(this).find('img').attr('src')
-        // console.log(url)
+        let url = $(element).find('img').attr('src')
         let uniqueUrl = url.substring(url.lastIndexOf('/') + 1)
         http.get(url, (res) => {
           let imgData = ''
@@ -54,7 +57,7 @@ router.get('/spider', (req, res, next) => {
 
         items.push({
           image_id: idx,
-          image_url: '/images/crawler_image/' + uniqueUrl,
+          image_url: '/images/' + uniqueUrl,
           image_title: $(this).find('img').attr('title')
         })
       })
@@ -69,8 +72,7 @@ router.get('/spider', (req, res, next) => {
       title = $('.prod-info-title').find('h1').text()
       let allItems = {
         title: title.substring(0, title.indexOf('#')),
-        img: items,
-        property: property
+        img: items
       }
       res.send(allItems)
     })

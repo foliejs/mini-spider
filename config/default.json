@@ -2,5 +2,10 @@
   "port":10100,
   "server":{
     "description":"mini spider has listening on"
-  }
+  },
+  "apple":{
+    "parent":"list",
+    "child":"li"
+  },
+  "savePath":"./public/images/"
 }
