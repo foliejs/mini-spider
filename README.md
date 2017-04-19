@@ -12,7 +12,7 @@ spider tool for mini web
 ```bash
 git clone https://github.com/foliejs/mini-spider
 ```
-## Spider List
+## Spider Lists
 * [Apple Accessories](http://www.miniinthebox.com/apple-accessories_c4861?prm=2.2.51.0)
 * [Cell Phone Accessories](http://www.miniinthebox.com/cell-phone-accessories_c3021?prm=2.2.51.0)
 * [PC & Tablet Accessories](http://www.miniinthebox.com/computer-gadgets_c3017?prm=2.2.51.0)
