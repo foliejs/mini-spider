@@ -1,0 +1,119 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.29
+3 info using node@v6.10.2
+4 warn deprecated This version of npm lacks support for important features,
+5 warn deprecated such as scoped packages, offered by the primary npm
+6 warn deprecated registry. Consider upgrading to at least npm@2, if not the
+7 warn deprecated latest stable version. To upgrade to npm@2, run:
+8 warn deprecated npm -g install npm@latest-2
+9 warn deprecated To upgrade to the latest stable version, run:
+10 warn deprecated npm -g install npm@latest
+11 warn deprecated (Depending on how Node.js was installed on your system, you
+12 warn deprecated may need to prefix the preceding commands with `sudo`, or if
+13 warn deprecated on Windows, run them from an Administrator prompt.)
+14 warn deprecated If you're running the version of npm bundled with
+15 warn deprecated Node.js 0.10 LTS, be aware that the next version of 0.10 LTS
+16 warn deprecated will be bundled with a version of npm@2, which has some small
+17 warn deprecated backwards-incompatible changes made to `npm run-script` and
+18 warn deprecated semver behavior.
+19 verbose publish [ '.' ]
+20 verbose cache add [ '.', null ]
+21 verbose cache add name=undefined spec="." args=[".",null]
+22 verbose parsed url Url {
+22 verbose parsed url   protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: '.',
+22 verbose parsed url   path: '.',
+22 verbose parsed url   href: '.' }
+23 silly lockFile 3a52ce78- .
+24 verbose lock . /Users/sunNode/.npm/3a52ce78-.lock
+25 verbose tar pack [ '/Users/sunNode/.npm/mini-spider/1.1.0/package.tgz', '.' ]
+26 verbose tarball /Users/sunNode/.npm/mini-spider/1.1.0/package.tgz
+27 verbose folder .
+28 info prepublish mini-spider@1.1.0
+29 silly lockFile 1f1177db-tar tar://.
+30 verbose lock tar://. /Users/sunNode/.npm/1f1177db-tar.lock
+31 silly lockFile de5dce82-pm-mini-spider-1-1-0-package-tgz tar:///Users/sunNode/.npm/mini-spider/1.1.0/package.tgz
+32 verbose lock tar:///Users/sunNode/.npm/mini-spider/1.1.0/package.tgz /Users/sunNode/.npm/de5dce82-pm-mini-spider-1-1-0-package-tgz.lock
+33 silly lockFile 1f1177db-tar tar://.
+34 silly lockFile 1f1177db-tar tar://.
+35 silly lockFile de5dce82-pm-mini-spider-1-1-0-package-tgz tar:///Users/sunNode/.npm/mini-spider/1.1.0/package.tgz
+36 silly lockFile de5dce82-pm-mini-spider-1-1-0-package-tgz tar:///Users/sunNode/.npm/mini-spider/1.1.0/package.tgz
+37 silly lockFile 1756562c-de-npm-mini-spider-1-1-0-package /Users/sunNode/.npm/mini-spider/1.1.0/package
+38 verbose lock /Users/sunNode/.npm/mini-spider/1.1.0/package /Users/sunNode/.npm/1756562c-de-npm-mini-spider-1-1-0-package.lock
+39 silly lockFile 1756562c-de-npm-mini-spider-1-1-0-package /Users/sunNode/.npm/mini-spider/1.1.0/package
+40 silly lockFile 1756562c-de-npm-mini-spider-1-1-0-package /Users/sunNode/.npm/mini-spider/1.1.0/package
+41 silly lockFile 3a52ce78- .
+42 silly lockFile 3a52ce78- .
+43 silly publish { name: 'mini-spider',
+43 silly publish   version: '1.1.0',
+43 silly publish   private: false,
+43 silly publish   scripts: { start: 'nodemon ./bin/www' },
+43 silly publish   dependencies:
+43 silly publish    { 'body-parser': '~1.16.0',
+43 silly publish      cheerio: '^0.22.0',
+43 silly publish      cluster: '^0.7.7',
+43 silly publish      'cookie-parser': '~1.4.3',
+43 silly publish      debug: '~2.6.0',
+43 silly publish      ejs: '~2.5.5',
+43 silly publish      express: '~4.14.1',
+43 silly publish      'express-session': '^1.15.1',
+43 silly publish      http: '^0.0.0',
+43 silly publish      mongoose: '^4.9.1',
+43 silly publish      morgan: '~1.7.0',
+43 silly publish      os: '^0.1.1',
+43 silly publish      'serve-favicon': '~2.3.2',
+43 silly publish      superagent: '^3.5.2',
+43 silly publish      'swagger-jsdoc': '^1.9.2' },
+43 silly publish   readme: 'spider tool for mini web\n\n### Contains\n- [x] [Node.js](https://github.com/nodejs/node)\n- [x] [Express](https://github.com/expressjs/express)\n- [x] [EJS](https://github.com/tj/ejs)\n- [x] [Mongoose](https://github.com/Automattic/mongoose)\n- [x] [Swagger-Jsdoc](https://github.com/Surnet/swagger-jsdoc)\n\n\n## Installation\n```bash\ngit clone https://github.com/foliejs/mini-spider\n```\n## Spider Lists\n* [Apple Accessories](http://www.miniinthebox.com/apple-accessories_c4861?prm=2.2.51.0)\n* [Cell Phone Accessories](http://www.miniinthebox.com/cell-phone-accessories_c3021?prm=2.2.51.0)\n* [PC & Tablet Accessories](http://www.miniinthebox.com/computer-gadgets_c3017?prm=2.2.51.0)\n* [Electronics Accessories](http://www.miniinthebox.com/electronics-gadgets_c2624?prm=2.2.51.0)\n* [LED & Lighting](http://www.miniinthebox.com/led-lighting_c4685?prm=2.2.51.0)\n* [Sports & Hobbies](http://www.miniinthebox.com/sports-lifestyle_c8017?prm=2.2.51.0)\n* [Household & Pets](http://www.miniinthebox.com/household-pets_c3026?prm=2.2.51.0)\n* [Jewelry & Watches](http://www.miniinthebox.com/jewelry-watches_c4676?prm=2.2.51.0)\n* [Fashion & Clothing](http://www.lightinthebox.com/c/fashion_71?prm=2.2.51.0)\n\n## Install dependencies:\n```bash\nyarn install\n```\n\n## Usage\n\n```bash\nyarn start\n```\n\n### LICENSE\n\nMIT License\n\nCopyright (c) 2017 Folie JS\n',
+43 silly publish   readmeFilename: 'README.md',
+43 silly publish   gitHead: '4b391140c63ac0880f9e44ecdf6a8f3d72ddf17f',
+43 silly publish   description: 'spider tool for mini web',
+43 silly publish   _id: 'mini-spider@1.1.0',
+43 silly publish   _shasum: 'e8f637537d09d3b79c12daf7e6ca90e083462750',
+43 silly publish   _from: '.' }
+44 verbose request where is /mini-spider
+45 verbose request registry http://r.cnpmjs.org/
+46 verbose request id 463cbb1826c54e3d
+47 verbose url raw /mini-spider
+48 verbose url resolving [ 'http://r.cnpmjs.org/', './mini-spider' ]
+49 verbose url resolved http://r.cnpmjs.org/mini-spider
+50 verbose request where is http://r.cnpmjs.org/mini-spider
+51 info trying registry request attempt 1 at 18:52:20
+52 http PUT http://r.cnpmjs.org/mini-spider
+53 http 403 http://r.cnpmjs.org/mini-spider
+54 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+54 verbose headers   date: 'Sun, 23 Apr 2017 10:52:29 GMT',
+54 verbose headers   'content-type': 'application/json; charset=utf-8',
+54 verbose headers   'transfer-encoding': 'chunked',
+54 verbose headers   connection: 'close',
+54 verbose headers   'x-current-requests': '1',
+54 verbose headers   'x-readtime': '233',
+54 verbose headers   'content-encoding': 'gzip' }
+55 error publish Failed PUT 403
+56 error Error: no_perms Private mode enable, only admin can publish this module: mini-spider
+56 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+56 error     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:251:7
+56 error     at Gunzip.onEnd (zlib.js:227:5)
+56 error     at emitNone (events.js:91:20)
+56 error     at Gunzip.emit (events.js:185:7)
+56 error     at endReadableNT (_stream_readable.js:974:12)
+56 error     at _combinedTickCallback (internal/process/next_tick.js:80:11)
+56 error     at process._tickCallback (internal/process/next_tick.js:104:9)
+57 error If you need help, you may report this *entire* log,
+57 error including the npm and node versions, at:
+57 error     <http://github.com/npm/npm/issues>
+58 error System Darwin 15.5.0
+59 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+60 error cwd /Users/sunNode/Documents/project/tool/mini-spider
+61 error node -v v6.10.2
+62 error npm -v 1.4.29
+63 verbose exit [ 1, true ]

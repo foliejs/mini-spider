@@ -1,9 +1,10 @@
 {
   "name": "mini-spider",
   "version": "1.1.0",
-  "private": true,
+ "bin": "./bin/www", 
+"private": false,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -21,5 +22,13 @@
     "serve-favicon": "~2.3.2",
     "superagent": "^3.5.2",
     "swagger-jsdoc": "^1.9.2"
+  },
+  "pkg": {
+    "assets": [
+      "views/**/*"
+    ],
+    "targets": [
+      "node7"
+    ]
   }
 }
