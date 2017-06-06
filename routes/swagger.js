@@ -7,8 +7,8 @@ router.get('/doc', (req, res) => {
     swaggerDefinition: {
       info: {
         title: 'cute boy',
-        version: '1.0.0',
-      },
+        version: '1.0.0'
+      }
     },
     apis: ['./users.js']
   }

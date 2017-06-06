@@ -15,22 +15,21 @@ if (cluster.isMaster) {
     cluster.fork()
   }
 
-  cluster.on('listening',function(worker,address){
-    console.log('listening: worker ' + worker.process.pid +', Address: '+address.address+":"+address.port)
+  cluster.on('listening', function (worker, address) {
+    console.log('listening: worker ' + worker.process.pid + ', Address: ' + address.address + ':' + address.port)
   })
 
-  cluster.on('exit', function(worker, code, signal) {
+  cluster.on('exit', function (worker, code, signal) {
     console.log('worker ' + worker.process.pid + ' died')
   })
 } else {
   // Workers can share any TCP connection
   // In this case its a HTTP server
-  http.createServer(function(req, res) {
+  http.createServer(function (req, res) {
     res.writeHead(200)
-    res.end("hello world\n")
-  }).listen(0);
+    res.end('hello world\n')
+  }).listen(0)
 }
-
 
 // cluster.setttings:配置集群参数对象
 // cluster.isMaster:判断是不是master节点
