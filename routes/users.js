@@ -17,6 +17,7 @@ router.get('/', (req, res) => {
   db.User
     .find({})
     .then((result) => res.send(result))
+    .catch(err => res.send(500, err))
 })
 
 /**
